@@ -22,7 +22,6 @@ This project is a **Real-Time Stock Price Prediction** application that uses an 
 
 - [Contributing](#contributing)
 
-- [License](#license)
 
 ---
 
@@ -259,6 +258,3 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 
 - Update `"avirooppal42@gmail.com"` with your contact email if you want people to reach you.
 
-- Consider adding more details if you plan to include more functionality, such as additional data sources or front-end components.
-
-This README should provide a solid foundation for documenting your project and guiding users through setting up and using your stock price prediction application.
