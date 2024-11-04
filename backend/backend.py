@@ -1,20 +1,20 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 import yfinance as yf
 import os
 
-# Initialize the Flask app
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../frontend/static', template_folder='../frontend')
 
-# Load the trained LSTM model
+# Load model and scaler setup as before
 model_path = os.path.join("..", "model", "stock_price_prediction_model.h5")
 model = load_model(model_path)
-
-# Initialize the scaler to normalize and de-normalize stock prices.
-# The model was trained on scaled data in the range (0, 1), so we use the same scaler here.
 scaler = MinMaxScaler(feature_range=(0, 1))
+
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 # Function to fetch recent stock data and preprocess it
 def fetch_recent_data(ticker, window_size=60):
