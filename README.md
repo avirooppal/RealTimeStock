@@ -61,7 +61,7 @@ The goal of this project is to predict the next day's closing stock price for a 
 
    ```bash
 
-   git clone https://github.com/your-username/your-repository-name.git
+   git clone https://github.com/avirooppal/RealTimeStock.git
 
    cd your-repository-name
 
